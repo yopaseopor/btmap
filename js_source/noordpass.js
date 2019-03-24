@@ -245,6 +245,7 @@
 		labelOutlineColor : "black",
 		labelOutlineWidth : 3,
 		label : "${display}"
+		
 	})
 	if (browser == "ie10") {
 		var localstyle =  new OpenLayers.Style( {
@@ -332,7 +333,7 @@
 	}
 	//---- add an image if specified by  placehoder in name, placeholders are #l# > single line, #dl#>line line,#d#>dotted 
 	//	alert(name);
-	name = name.replace("#l#", "<img style='vertical-align: middle;background-color: " + color + ";' src='img/line.gif'>&nbsp");
+	name = name.replace("#l#", "<img src='https://github.com/yopaseopor/accessibilitat/raw/master/icons/crossing_no.png'>&nbsp");
 	name = name.replace("#dl#", "<img style='vertical-align: middle;background-color: " + color + ";' src='img/lineline.gif'>&nbsp");
 	name = name.replace("#d#", "<img style='vertical-align: middle;background-color: " + color + ";' src='img/dots.gif'>&nbsp");
 	name = name.replace("#c#", "<img style='vertical-align: middle;background-color: " + color + ";' src='img/tcircle.gif'>&nbsp");
