@@ -310,12 +310,7 @@
 	// ----- opacity catch in dash, if dash = "4 3@1.0" 1.0 is used as opacity
 	         var icon_shop_no_wheelchair = 'https://github.com/yopaseopor/accessibilitat/raw/master/icons/wheelchair_no_shop.png';			
 if (feature.properties.tags['crossing'] == "traffic_signals") {
-                icon = L.icon({
-                          iconSize: [16, 16],
-                          iconAnchor: [8, 0],
-                          popupAnchor:  [1, -24],
-                          img_url: icon_shop_no_wheelchair
-                });
+                          img_url: icon_shop_no_wheelchair;
               }
 	
 	
