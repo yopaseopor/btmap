@@ -306,8 +306,21 @@
 	return layer;
 	}
 	
-	function make_a_layer(data_url, color, name, size, visible, dash) {
+	function make_a_layer(data_url, img_url, color, name, size, visible, dash) {
 	// ----- opacity catch in dash, if dash = "4 3@1.0" 1.0 is used as opacity
+	         var icon_shop_no_wheelchair = 'https://github.com/yopaseopor/accessibilitat/raw/master/icons/wheelchair_no_shop.png';			
+if (feature.properties.tags['crossing'] == "traffic_signals") {
+                icon = L.icon({
+                          iconSize: [16, 16],
+                          iconAnchor: [8, 0],
+                          popupAnchor:  [1, -24],
+                          img_url: icon_shop_no_wheelchair
+                });
+              }
+	
+	
+	
+	
 	if (dash != undefined) {
 		dashalfa = dash.split("@");
 		dash = dashalfa[0];
@@ -333,7 +346,7 @@
 	}
 	//---- add an image if specified by  placehoder in name, placeholders are #l# > single line, #dl#>line line,#d#>dotted 
 	//	alert(name);
-	name = name.replace("#l#", "<img src='https://github.com/yopaseopor/accessibilitat/raw/master/icons/crossing_no.png'>&nbsp");
+	name = name.replace("#l#", "<img style='vertical-align: middle;background-color: " + color + ";' src='img/line.gif'>&nbsp");
 	name = name.replace("#dl#", "<img style='vertical-align: middle;background-color: " + color + ";' src='img/lineline.gif'>&nbsp");
 	name = name.replace("#d#", "<img style='vertical-align: middle;background-color: " + color + ";' src='img/dots.gif'>&nbsp");
 	name = name.replace("#c#", "<img style='vertical-align: middle;background-color: " + color + ";' src='img/tcircle.gif'>&nbsp");
